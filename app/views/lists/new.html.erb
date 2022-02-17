@@ -1,6 +1,6 @@
-<h1>Let's create a movie list</h1>
+<h1>Create a new List/h1>
+
 <%= simple_form_for @list do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :category, as: :check_boxes %>
+  <%= f.input :name %>
   <%= f.submit "Submit name", class: "btn btn-primary" %>
 <% end %>

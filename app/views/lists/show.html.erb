@@ -1,1 +1,14 @@
 <h1>Contents of List </h1>
+
+<p><%= link_to 'Add new Movie + Comment', new_list_bookmark_path(@list) %></p>
+
+
+<% @bookmarks.each do |bookmark| %>
+  <div class="card-product">
+    <img src=<%= bookmark.movie.poster_url%>>
+    <div class="card-product-infos">
+      <h2><%= bookmark.movie.title%></h2>
+      <p>Comments: <%= bookmark.comment %></p>
+    </div>
+  </div>
+<% end %>
