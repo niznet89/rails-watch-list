@@ -9,6 +9,7 @@
     <div class="card-product-infos">
       <h2><%= bookmark.movie.title%></h2>
       <p>Comments: <%= bookmark.comment %></p>
+      <%= link_to "Delete this Bookmark", bookmark_path(bookmark), method: :delete %>
     </div>
   </div>
 <% end %>

@@ -1,5 +1,16 @@
-<h1>Movies Lists</h1>
+<h1 style="text-align:center">My beautiful list of movies</h1>
+
+
+
+<div class="paper">
+  <div class="pattern">
+    <div class="content">
+      <ul>
+        <% @lists.each do |list| %>
+          <li><%= link_to list.name, list_path(list) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 <ul>
-<% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-<% end %>
